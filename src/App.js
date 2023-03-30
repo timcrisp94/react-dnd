@@ -1,5 +1,5 @@
 import {useState} from 'react'
-
+import NavBar from './components/NavBar/NavBar';
 import './App.css';
 
 function App() {
@@ -11,9 +11,7 @@ function App() {
 
   return (
     <>
-      <h1>
-        This is our app!
-      </h1>
+      <NavBar navItems={navItems}/>
     </>
   );
 }
