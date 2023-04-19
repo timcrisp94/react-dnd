@@ -1,6 +1,9 @@
-import {useState} from 'react'
-import NavBar from './components/NavBar/NavBar';
+import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import './App.css';
+import NavBar from './components/NavBar/NavBar';
+import ClassList from './pages/ClassList/ClassList'
+
 
 function App() {
   const [navItems, setNavItems] = useState([
@@ -12,6 +15,9 @@ function App() {
   return (
     <>
       <NavBar navItems={navItems}/>
+      <Routes>
+        <Route path="/class-list" element={<ClassList />}/>
+      </Routes>
     </>
   );
 }
