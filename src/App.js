@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ClassList from './pages/ClassList/ClassList'
+import ClassDetails from './pages/ClassDetails/ClassDetails'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <NavBar navItems={navItems}/>
       <Routes>
         <Route path="/class-list" element={<ClassList />}/>
+        <Route path="/class" element={<ClassDetails />}/>
       </Routes>
     </>
   );
