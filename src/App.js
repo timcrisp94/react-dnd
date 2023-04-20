@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ClassList from './pages/ClassList/ClassList'
 import ClassDetails from './pages/ClassDetails/ClassDetails'
+import MonsterList from './pages/MonsterList/MonsterList'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/class-list" element={<ClassList />}/>
         <Route path="/class" element={<ClassDetails />}/>
+        <Route path="/monster-list" element={<MonsterList />}/>
       </Routes>
     </>
   );
