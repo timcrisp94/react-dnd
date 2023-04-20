@@ -8,8 +8,6 @@ const MonsterDetails = (props) => {
   let location = useLocation()
 
   useEffect(()=> {
-    // We can use the same API function!
-    // FUNCTIONAL PROGRAMMING MAGIC, AHOY!!!
     getDetails(location.state.monster.url)
     .then(monsterDetails => setMonsterDetails(monsterDetails))
   }, [])
@@ -19,8 +17,7 @@ const MonsterDetails = (props) => {
       <img src="http://theoldreader.com/kittens/320/240/" alt=""/>
       <h2>{monsterDetails.name}</h2>
       <h4>Size: {monsterDetails.size}</h4>
-      <h4>Type: {monsterDetails.type}</h4>
-      <h4>AC: {monsterDetails.armor_class}</h4>
+      <h4>Type: {typeof monsterDetails.type === 'string' ? monsterDetails.type : ''}</h4>
       <h4>Actions:</h4>
       {monsterDetails.actions ?
       <>
